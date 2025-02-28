@@ -1,9 +1,10 @@
 // @flow strict
 
-import * as React from 'react';
+import React from 'react';
+import Link from "next/link";
+import { RiCodeSSlashFill, RiLiveFill } from "react-icons/ri";
 
-function ProjectCard({ project }) {
-
+const ProjectCard = ({ project }) => {
   return (
     <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
       <div className="flex flex-row">
@@ -63,6 +64,20 @@ function ProjectCard({ project }) {
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <Link className="mb-4 ml-4 bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-2xl transition-all duration-300 hover:from-pink-500 hover:to-violet-600" target="_blank" href={project.code}>
+          <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-2xl border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
+            <span>Code</span>
+            <RiCodeSSlashFill size={16} />
+          </button>
+        </Link>
+
+        <Link className="mb-4 ml-4 flex items-center gap-1 hover:gap-3 rounded-2xl bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold" role="button" target="_blank" href={project.demo}>
+          <span>Live</span>
+          <RiLiveFill size={16} />
+        </Link>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ export const projectsData = [
         name: 'Movies and TV Shows Web App',
         description: 'PrimeFlix is a React application for browsing and discovering movies and TV shows. It provides users with detailed information about their favorite films and series, including ratings, reviews, and trailers. Also allows users to store their search history and displays the top 5 trending movies based on user searches.',        tools: ['React', 'ViteJS', 'TMDB API', 'Tailwind CSS', 'AppWrite'],
         role: 'Front-end Developer',
-        code: '',
-        demo: '',
+        code: 'https://github.com/JayPatel3009/prime-flix',
+        demo: 'https://jaypatel3009.github.io/prime-flix',
     }
 ];

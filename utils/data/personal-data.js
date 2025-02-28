@@ -2,7 +2,7 @@ export const personalData = {
   name: 'Jay Patel',
   profile: '/profile.png',
   designation: 'Software Developer',
-  description: 'My name is Jay Patel. I am a passionate and enthusiastic professional software developer. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript, TypeScript, and C# and I love to do most of the things using these languages. I am available for any kind of job opportunity that suits my skills and interests.',
+  description: 'My name is Jay Patel, and I am a passionate software developer with a strong commitment to excellence and a proactive approach to continuous learning. I thrive on exploring new technologies and solving complex problems, and my interests span nearly every facet of web application development, as I strive to make the web more open and accessible for everyone. With core expertise in JavaScript, TypeScript, and C#, I leverage these languages to deliver innovative solutions and welcome job opportunities that align with my skills and interests.',
   email: 'patel.jay3009@gmail.com',
   address: 'Auckland, New Zealand',
   github: 'https://github.com/JayPatel3009',

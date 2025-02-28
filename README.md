@@ -50,9 +50,9 @@ git --version
 To Fork the repo click on the fork button at the top right of the page. Once the repo is forked open your terminal and perform the following commands
 
 ```bash
-git clone https://github.com/<YOUR GITHUB USERNAME>/developer-portfolio.git
+git clone https://github.com/JayPatel3009/portfolio.git
 
-cd developer-portfolio
+cd portfolio
 ```
 
 ### Install packages from the root directory
