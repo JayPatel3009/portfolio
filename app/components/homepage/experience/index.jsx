@@ -6,6 +6,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
+import { computeDuration } from "@/utils/date-helpers";
 
 function Experience() {
   return (
@@ -39,37 +40,46 @@ function Experience() {
           <div>
             <div className="flex flex-col gap-6">
               {
-                experiences.map(experience => (
-                  <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
-                    <div className="p-3 relative">
-                      <Image
-                        src="/blur-23.svg"
-                        alt="Hero"
-                        width={1080}
-                        height={200}
-                        className="absolute bottom-0 opacity-80"
-                      />
-                      <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
-                          {experience.duration}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                          <BsPersonWorkspace size={36} />
-                        </div>
-                        <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                            {experience.title}
-                          </p>
-                          <p className="text-sm sm:text-base">
-                            {experience.company}
+                experiences.map(experience => {
+                  // Format start and end dates
+                  const formattedStart = new Date(experience.startDate).toLocaleDateString("default", { month: "short", year: "numeric" });
+                  const formattedEnd = experience.endDate
+                    ? new Date(experience.endDate).toLocaleDateString("default", { month: "short", year: "numeric" })
+                    : "Present";
+                  const duration = computeDuration(experience.startDate, experience.endDate);
+
+                  return (
+                    <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
+                      <div className="p-3 relative">
+                        <Image
+                          src="/blur-23.svg"
+                          alt="Hero"
+                          width={1080}
+                          height={200}
+                          className="absolute bottom-0 opacity-80"
+                        />
+                        <div className="flex justify-center">
+                          <p className="text-xs sm:text-sm text-[#16f2b3]">
+                            {`${formattedStart} - ${formattedEnd} (${duration})`}
                           </p>
                         </div>
+                        <div className="flex items-center gap-x-8 px-3 py-5">
+                          <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                            <BsPersonWorkspace size={36} />
+                          </div>
+                          <div>
+                            <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                              {experience.title}
+                            </p>
+                            <p className="text-sm sm:text-base">
+                              {experience.company}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </GlowCard>
-                ))
+                    </GlowCard>
+                  );
+                })
               }
             </div>
           </div>
