@@ -11,6 +11,9 @@ export function computeDuration(startDate, endDate) {
       years--;
       months += 12;
     }
+
+    // If it's been less than one month
+    if (years === 0 && months === 0) return "<1 month";
   
     // Build a string for the duration. You can further refine the display if needed.
     const yearsDisplay = years > 0 ? `${years} ${years === 1 ? "year" : "years"}` : "";
