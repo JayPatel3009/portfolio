@@ -1,10 +1,29 @@
+"use client";
 // @flow strict
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
+
   return (
-    <nav className="bg-transparent">
-      <div className="flex items-center justify-between py-5">
+    <nav className={`py-5 ${scrolled ? "sticky top-0 z-50 bg-[#0d1224] bg-opacity-50 backdrop-blur-lg" : "bg-transparent"}`}>
+      <div className="flex items-center justify-between">
         <div className="flex flex-shrink-0 items-center">
           <Link
             href="#"
