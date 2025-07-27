@@ -16,5 +16,14 @@ export const projectsData = [
         role: 'Dedicated Front-End Developer',
         code: 'https://github.com/JayPatel3009/prime-flix',
         demo: 'https://jaypatel3009.github.io/prime-flix',
+    },
+    {
+        id: 3,
+        name: 'JobApplicationTracker',
+        description: 'A simple job application tracker built with ASP.NET Core Web API (backend) and Angular (frontend). This project allows users to add, update, view, and delete job applications they have submitted, tracking key details such as the company name, position, status, and the date applied.',
+        tools: ['Angular 19', 'Entity Framework Core', 'ASP.NET Core', 'Swagger UI', 'In-memory database'],
+        role: 'Full-stack Web Developer',
+        code: 'https://github.com/JayPatel3009/JobApplicationTracker',
+        demo: '',
     }
 ];
