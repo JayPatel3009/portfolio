@@ -1,37 +1,44 @@
 "use client";
 // @flow strict
 
-import { useState, useEffect, useMemo } from 'react';
-import { experiences } from '@/utils/data/experience';
-import Image from 'next/image';
-import { BsPersonWorkspace } from 'react-icons/bs';
-import experience from '../../../assets/lottie/code.json';
-import AnimationLottie from '../../helper/animation-lottie';
-import GlowCard from '../../helper/glow-card';
-import { computeDuration } from '@/utils/date-helpers';
+import { useState, useEffect, useMemo } from "react";
+import { experiences } from "@/utils/data/experience";
+import Image from "next/image";
+import { BsPersonWorkspace } from "react-icons/bs";
+import experience from "../../../assets/lottie/code.json";
+import AnimationLottie from "../../helper/animation-lottie";
+import GlowCard from "../../helper/glow-card";
+import { computeDuration } from "@/utils/date-helpers";
 
 function ExperienceCard({ exp }) {
   // Memoize formatted start and static end strings
   const formattedStart = useMemo(
-    () => new Date(exp.startDate).toLocaleDateString('default', { month: 'short', year: 'numeric' }),
+    () =>
+      new Date(exp.startDate).toLocaleDateString("default", {
+        month: "short",
+        year: "numeric",
+      }),
     [exp.startDate]
   );
   const formattedEndStatic = useMemo(
     () =>
       exp.endDate
-        ? new Date(exp.endDate).toLocaleDateString('default', { month: 'short', year: 'numeric' })
-        : 'Present',
+        ? new Date(exp.endDate).toLocaleDateString("default", {
+            month: "short",
+            year: "numeric",
+          })
+        : "Present",
     [exp.endDate]
   );
 
   // Compute dynamic duration on client-side only
-  const [duration, setDuration] = useState('');
+  const [duration, setDuration] = useState("");
   useEffect(() => {
     setDuration(computeDuration(exp.startDate, exp.endDate));
   }, [exp.startDate, exp.endDate]);
 
   return (
-    <GlowCard key={exp.id} identifier={`experience-${exp.id}`}>  
+    <GlowCard key={exp.id} identifier={`experience-${exp.id}`}>
       <div className="p-3 relative">
         <Image
           src="/blur-23.svg"
@@ -56,9 +63,7 @@ function ExperienceCard({ exp }) {
             <p className="text-base sm:text-xl mb-2 font-medium uppercase">
               {exp.title}
             </p>
-            <p className="text-sm sm:text-base">
-              {exp.company}
-            </p>
+            <p className="text-sm sm:text-base">{exp.company}</p>
           </div>
         </div>
       </div>
@@ -100,7 +105,7 @@ export default function Experience() {
 
           <div>
             <div className="flex flex-col gap-6">
-              {experiences.map(exp => (
+              {experiences.map((exp) => (
                 <ExperienceCard key={exp.id} exp={exp} />
               ))}
             </div>

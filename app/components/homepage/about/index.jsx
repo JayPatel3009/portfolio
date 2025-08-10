@@ -1,10 +1,14 @@
 // @flow strict
+"use client";
 
 import { personalData } from "@/utils/data/personal-data";
-import Image from "next/image";
-
+import ProfileCard from "./ProfileCard";
 
 function AboutSection() {
+  const handleContactClick = () => {
+    window.location.href = `mailto:${personalData.email}`;
+  };
+
   return (
     <div id="about" className="my-12 lg:my-16 relative">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
@@ -23,17 +27,30 @@ function AboutSection() {
           </p>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
-          <Image
+          {/* <Image
             src={personalData.profile}
             width={280}
             height={280}
             alt="Jay Patel"
             className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
+          /> */}
+
+          <ProfileCard
+            name={personalData.name}
+            title={personalData.designation}
+            handle={personalData.devUsername}
+            status="Online"
+            contactText="Contact Me"
+            avatarUrl={personalData.profile}
+            showUserInfo={true}
+            enableTilt={true}
+            enableMobileTilt={false}
+            onContactClick={handleContactClick}
           />
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default AboutSection;
