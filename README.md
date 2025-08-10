@@ -92,7 +92,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 1. **Build the Docker Image using Dockerfile.dev**:
 
     ```bash
-    docker build -t nextjs-app -f Dockerfile.dev .
+    docker build -t nextjs-app -f Dockerfile.dev
     ```
 
 2. **Running the Docker Container**:
