@@ -1,8 +1,8 @@
 export const personalData = {
   name: 'Jay Patel',
   profile: '/profile.png',
-  designation: 'Software Developer',
-  description: 'My name is Jay Patel, and I am a passionate software developer with a strong commitment to excellence and a proactive approach to continuous learning. I thrive on exploring new technologies and solving complex problems, and my interests span nearly every facet of web application development, as I strive to make the web more open and accessible for everyone. With core expertise in JavaScript, TypeScript, and C#, I leverage these languages to deliver innovative solutions and welcome job opportunities that align with my skills and interests.',
+  designation: 'Senior Software Developer',
+  description: 'My name is Jay Patel, and I am a passionate Senior Software Developer with a strong commitment to excellence and extensive experience in enterprise legacy modernization, full-stack web development, and cloud solutions. Currently working at Datacom on mission-critical government platforms, I specialize in modernizing legacy .NET Framework applications to .NET 10 Blazor WebAssembly SPA and ASP.NET Core Web APIs. I thrive on exploring new technologies and solving complex problems, with interests spanning nearly every facet of web application development as I strive to make the web more open and accessible. With core expertise in JavaScript, TypeScript, and C#, alongside a dedication to clean architecture, scalable API design, automated testing, and leveraging AI-assisted development frameworks to accelerate delivery, I continuously seek innovative solutions and welcome new opportunities that align with my skills and interests.',
   email: 'patel.jay3009@gmail.com',
   address: 'Auckland, New Zealand',
   github: 'https://github.com/JayPatel3009',
@@ -12,5 +12,5 @@ export const personalData = {
   stackOverflow: '#',
   leetcode: '#',
   devUsername: 'JayPatel3009',
-  resume: 'https://drive.google.com/file/d/1QAvRDlKwq3q8IoQqU-nF4rlKco6w45Di/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1bG0Znkvdq9OfijhcZuyi7a9kuPU6Qbc-/view?usp=sharing',
 }

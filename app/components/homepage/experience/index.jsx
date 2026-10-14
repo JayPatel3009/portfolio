@@ -63,7 +63,16 @@ function ExperienceCard({ exp }) {
             <p className="text-base sm:text-xl mb-2 font-medium uppercase">
               {exp.title}
             </p>
-            <p className="text-sm sm:text-base">{exp.company}</p>
+            <p className="text-sm sm:text-base mb-3">{exp.company}</p>
+            {exp.description && Array.isArray(exp.description) && (
+              <ul className="list-disc list-inside space-y-1 text-xs sm:text-sm text-[#d3d8e8]">
+                {exp.description.map((item, idx) => (
+                  <li key={idx} className="leading-relaxed">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>
