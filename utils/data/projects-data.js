@@ -19,7 +19,7 @@ export const projectsData = [
   },
   {
     id: 2,
-    name: "PrimeFlix",
+    name: "Prime Flix",
     description:
       "PrimeFlix is a React application for browsing and discovering movies and TV shows. It provides users with detailed information about their favorite films and series, including ratings, reviews, and trailers. Also allows users to store their search history and displays the top 5 trending movies based on user searches.",
     tools: ["React", "Tailwind CSS", "ViteJS", "TMDB API", "AppWrite"],
@@ -29,7 +29,7 @@ export const projectsData = [
   },
   {
     id: 3,
-    name: "JobApplicationTracker",
+    name: "Job Application Tracker",
     description:
       "A simple job application tracker built with ASP.NET Core Web API (backend) and Angular (frontend). This project allows users to add, update, view, and delete job applications they have submitted, tracking key details such as the company name, position, status, and the date applied.",
     tools: [
@@ -41,6 +41,24 @@ export const projectsData = [
     ],
     role: "Full-stack Web Developer",
     code: "https://github.com/JayPatel3009/JobApplicationTracker",
+    demo: "",
+  },
+  {
+    id: 4,
+    name: "News Digest",
+    description:
+      "An AI-powered news briefing web application that delivers curated daily digests directly in the browser. It fetches real-time headlines across multiple topics from NewsAPI, leverages Google's Gemini API to summarize and rank articles with relevance scoring, and provides an executive briefing of top stories with zero backend infrastructure.",
+    tools: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Google Gemini API",
+      "Zustand",
+      "NewsAPI",
+    ],
+    role: "Dedicated Front-End Developer",
+    code: "https://github.com/JayPatel3009/news-digest",
     demo: "",
   },
 ];
