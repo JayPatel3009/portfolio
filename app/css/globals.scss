@@ -12,6 +12,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #0d1224;
